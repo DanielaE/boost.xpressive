@@ -418,7 +418,7 @@ void test_main()
 ///////////////////////////////////////////////////////////////////////////////
 // init_unit_test_suite
 //
-test_suite* init_unit_test_suite( int argc, char* argv[] )
+test_suite* init_unit_test_suite( int, char* argv[] )
 {
     s_argv1 = argv[1];
 

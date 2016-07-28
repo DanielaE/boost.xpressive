@@ -850,8 +850,8 @@ private:
       , mpl::size_t<0>
     ) const
     {
-        typedef typename range_const_iterator<ForwardRange>::type iterator;
-        iterator cur = boost::begin(format), end = boost::end(format);
+        typedef typename range_const_iterator<ForwardRange>::type iterator_;
+        iterator_ cur = boost::begin(format), end = boost::end(format);
 
         if(0 != (regex_constants::format_literal & flags))
         {

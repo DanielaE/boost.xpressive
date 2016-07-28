@@ -33,10 +33,10 @@ namespace boost { namespace xpressive { namespace detail
     struct lookbehind_matcher
       : quant_style<quant_none, 0, Xpr::pure>
     {
-        lookbehind_matcher(Xpr const &xpr, std::size_t wid, bool no, bool pure = Xpr::pure)
+        lookbehind_matcher(Xpr const &xpr, std::size_t wid, bool no, bool pure__ = Xpr::pure)
           : xpr_(xpr)
           , not_(no)
-          , pure_(pure)
+          , pure_(pure__)
           , width_(wid)
         {
             BOOST_XPR_ENSURE_(!is_unknown(this->width_), regex_constants::error_badlookbehind,

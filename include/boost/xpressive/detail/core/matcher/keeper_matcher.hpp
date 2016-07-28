@@ -28,9 +28,9 @@ namespace boost { namespace xpressive { namespace detail
     struct keeper_matcher
       : quant_style<quant_variable_width, unknown_width::value, Xpr::pure>
     {
-        keeper_matcher(Xpr const &xpr, bool pure = Xpr::pure)
+        keeper_matcher(Xpr const &xpr, bool pure__ = Xpr::pure)
           : xpr_(xpr)
-          , pure_(pure)
+          , pure_(pure__)
         {
         }
 

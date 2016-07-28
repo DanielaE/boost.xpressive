@@ -68,18 +68,18 @@ namespace boost { namespace xpressive { namespace detail
         std::size_t width_;
         mutable bool leading_;
 
-        simple_repeat_matcher(Xpr const &xpr, unsigned int min, unsigned int max, std::size_t width)
+        simple_repeat_matcher(Xpr const &xpr, unsigned int min, unsigned int max, std::size_t width__)
           : xpr_(xpr)
           , min_(min)
           , max_(max)
-          , width_(width)
+          , width_(width__)
           , leading_(false)
         {
             // it is the job of the parser to make sure this never happens
             BOOST_ASSERT(min <= max);
             BOOST_ASSERT(0 != max);
-            BOOST_ASSERT(0 != width && unknown_width() != width);
-            BOOST_ASSERT(Xpr::width == unknown_width() || Xpr::width == width);
+            BOOST_ASSERT(0 != width__ && unknown_width() != width__);
+            BOOST_ASSERT(Xpr::width == unknown_width() || Xpr::width == width__);
         }
 
         template<typename BidiIter, typename Next>

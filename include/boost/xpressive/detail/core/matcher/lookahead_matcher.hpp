@@ -32,10 +32,10 @@ namespace boost { namespace xpressive { namespace detail
     struct lookahead_matcher
       : quant_style<quant_none, 0, Xpr::pure>
     {
-        lookahead_matcher(Xpr const &xpr, bool no, bool pure = Xpr::pure)
+        lookahead_matcher(Xpr const &xpr, bool no, bool pure__ = Xpr::pure)
           : xpr_(xpr)
           , not_(no)
-          , pure_(pure)
+          , pure_(pure__)
         {
         }
 

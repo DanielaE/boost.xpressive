@@ -1354,7 +1354,6 @@ private:
 //
 template<typename BidiIter>
 struct regex_id_filter_predicate
-  : std::unary_function<match_results<BidiIter>, bool>
 {
     regex_id_filter_predicate(regex_id_type regex_id)
       : regex_id_(regex_id)

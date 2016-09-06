@@ -112,7 +112,6 @@ private:
 //  for use with a filter_iterator to filter a node out of a list of dependencies
 template<typename Derived>
 struct filter_self
-  : std::unary_function<shared_ptr<Derived>, bool>
 {
     filter_self(enable_reference_tracking<Derived> *self)
       : self_(self)
